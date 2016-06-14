@@ -1,5 +1,5 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
-import Hello from './components/Hello';
+import Main from './components/Main';
 
-ReactDOM.render(<Hello />, document.getElementById('root'));
+ReactDOM.render(<Main />, document.getElementById('root'));
