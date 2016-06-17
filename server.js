@@ -1,8 +1,14 @@
 import express from 'express';
+import schema from './data/schema';
+import GraphQLHTTP from 'express-graphql';
 import { MongoClient } from 'mongodb';
 
 let app = express();
 app.use(express.static('public'));
+
+app.use('/graphql', GraphQLHTTP({
+  schema
+}));
 
 app.get('/', (request, response) => {
   response.send('hello express!');
